@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>HTML et Javascript</title>
+        <met charset="UTF-8"></met>
+    </head>
+    <h1> Page de lancement de fenêtres</h1>
+    <p><a id="lien1">Pub pour un super nouveau site</a></p>
+    <p><a id="lien2" href="Baratin en anglais">Baratin en anglais</a></p>
+    <script>
+        let lien1 = document.getElementById("lien1")
+        let lien2 = document.getElementById("lien2")
+        lien1.addEventListener("click",fenetre1);
+        lien2.addEventListener("click", fenetre2);
+        function fenetre1(){
+            let argument3 = "height=500, width=165, left=120, top=200, menubar=no";
+            window.open ('grosMinetEtTiti.gif', "Titi", argument3);
+        }
+        let win;
+        function fenetre2(){
+            let argument3 = "height=500, width=500, left=300, top=300, resizable=yes";
+            win = window.open("exempleTextePopUp.html", "English", argument3);
+            setTimeout(function(){win.close();},1000);
+        }
+    </script>
+</html>
